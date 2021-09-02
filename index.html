@@ -19,7 +19,7 @@
 
         <main class="container">
             <section id="album-container">
-              <div class="card" v-for= "item in album">
+              <div class="card" v-for= "item in albumByYear">
                 <img :src="item.poster" :alt="item.title" />
                 <h2 class="title"> {{item.title}}</h2>
                 <address class="author"> {{item.author}}</address>

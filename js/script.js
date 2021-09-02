@@ -4,17 +4,23 @@ console.log ('collegato', Vue);
 
 const root = new Vue ({
     el: '#root', 
+
     data: {
         album: [],
-
     }, 
+
     computed: {
+        albumByYear() {
+            this.album.sort( (a, b) => {
+                return (a.year)-(b.year);
+            });
+
+            return this.album;   
+        },
         
-
     }, 
-    methods: {
 
-    },
+    methods: {},
 
     created() {
 
@@ -25,12 +31,10 @@ const root = new Vue ({
                 const response = res.data.response;
                 console.log(response);
 
-                this.album = response;
-                
-                
-                
+                this.album = response;   
             })
-        }  
+        } 
+         
     },
 
 });
