@@ -9,6 +9,7 @@ const root = new Vue ({
 
     }, 
     computed: {
+        
 
     }, 
     methods: {
@@ -23,19 +24,9 @@ const root = new Vue ({
             .then((res) => {
                 const response = res.data.response;
                 console.log(response);
-                const singleDisc = {
-                    poster: '',
-                    title: '',
-                    author: '',
-                    year: '',
-                };
 
-                singleDisc.poster = response.poster;
-                singleDisc.title = response.title;
-                singleDisc.author = response.author;
-                singleDisc.year = response.year;
-
-                this.album.push(singleDisc);
+                this.album = response;
+                
                 
                 
             })

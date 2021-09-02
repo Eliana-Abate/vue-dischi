@@ -19,11 +19,11 @@
 
         <main class="container">
             <section id="album-container">
-              <div class="card">
-                <img src="images/demo.jpg" alt="New Jersey" />
-                <h2 class="title"> {{album[singleDisc].title}}</h2>
-                <address class="author"> {{album[singleDisc].author}}</address>
-                <time datetime="1988" class="year"> {{album[singleDisc].year}}</time>
+              <div class="card" v-for= "item in album">
+                <img :src="item.poster" :alt="item.title" />
+                <h2 class="title"> {{item.title}}</h2>
+                <address class="author"> {{item.author}}</address>
+                <time :datetime="item.year" class="year"> {{item.year}}</time>
               </div>
             </section>
         </main>
