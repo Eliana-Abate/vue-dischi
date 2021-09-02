@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue - Dischi</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
@@ -15,14 +16,14 @@
               <img src="images/logo.png" />
             </div>
         </header>
-        
+
         <main class="container">
             <section id="album-container">
               <div class="card">
                 <img src="images/demo.jpg" alt="New Jersey" />
-                <h2 class="title">NEW JERSEY</h2>
-                <address class="author">Bon Jovi</address>
-                <time datetime="1988" class="year">1988</time>
+                <h2 class="title"> {{album[singleDisc].title}}</h2>
+                <address class="author"> {{album[singleDisc].author}}</address>
+                <time datetime="1988" class="year"> {{album[singleDisc].year}}</time>
               </div>
             </section>
         </main>
